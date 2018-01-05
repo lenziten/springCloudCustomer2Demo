@@ -3,10 +3,10 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.demo</groupId>
-  <artifactId>springBootCustomerDemo</artifactId>
+  <artifactId>springBootCustomer2Demo</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <name>springBootCustomerDemo Maven Webapp</name>
+  <name>springBootCustomer2Demo Maven Webapp</name>
   <url>http://maven.apache.org</url>
   
   <properties>
@@ -61,7 +61,7 @@
 	    </dependency>
 	    <dependency>
 	        <groupId>org.springframework.cloud</groupId>
-	        <artifactId>spring-cloud-starter-ribbon</artifactId>
+	        <artifactId>spring-cloud-starter-feign</artifactId>
 	    </dependency>
 		<!-- <dependency>
 		    <groupId>org.mybatis</groupId>
@@ -119,7 +119,7 @@
 	</dependencyManagement>
   
   <build>
-    <finalName>springBootCustomerDemo</finalName>
+    <finalName>springBootCustomer2Demo</finalName>
          <resources>
         	<resource>
         		<directory>src/main/java</directory>

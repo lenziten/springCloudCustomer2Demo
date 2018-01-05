@@ -9,6 +9,7 @@ import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomi
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,6 +19,7 @@ import org.springframework.web.client.RestTemplate;
 //@RestController
 @MapperScan("com.dao")
 @EnableDiscoveryClient
+@EnableFeignClients
 @EnableAutoConfiguration//(exclude={MapperScannerConfigurer.class})
 //@SpringBootApplication
 @ComponentScan
@@ -32,11 +34,11 @@ public class Application implements EmbeddedServletContainerCustomizer{
 //		arg0.setPort(9000);
 	}
 	
-	/**开启均衡负载能力*/
-	@Bean
-	@LoadBalanced
-	public RestTemplate restTemplate(){
-		return new RestTemplate();
-	}
+//	/**开启均衡负载能力*/
+//	@Bean
+//	@LoadBalanced
+//	public RestTemplate restTemplate(){
+//		return new RestTemplate();
+//	}
 
 }
